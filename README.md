@@ -1,2 +1,9 @@
-# aura-fei-fei
-Mission 01: Socratic dialogue engine and Galilean ethics debate — Squadron Fei-Fei, BTU WS 2026/27
+# Conversational AI
+
+Conversational AI: History, Applications, Future — BTU WS 2026/27.
+
+Squadron Fei-Fei (Group 13): Bilal Younus, Danish Hafeez and Anas Arshad.
+
+Each mission has its own folder.
+
+- [Mission One](Mission%20One/): Socratic dialogue engine and Galilean ethics debate.
