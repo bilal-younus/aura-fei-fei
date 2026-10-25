@@ -1,0 +1,5 @@
+Browser tab: 473662415, Title: "Conversational AI: History, Applications, Future | Starship Dialectic", URL: "https://dlearn-cai.web.app/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~				103 text 1. INIT 2. GREETING 3. COLLECT_SLOTS 4. CONFIRMATION 5. SUCCESS ⚠️ FAILURE BROKEN
+~				127 text FST TRANSDUCER CONSOLE STREAM State:  FAILURE_STATE 🤖 AURA FST ENGINE State:  INIT SYSTEM INITIALIZED. AURA FST Transducer online. Please initiate greeting (e.g., "Hello" or "AURA online"). 👤 CADET INPUT State:  INIT Can you tell me a joke about space? 🤖 AURA FST ENGINE State:  FAILURE_STATE TRANSITION ERROR: Unrecognized greeting token. Expected canonical greeting ("hello" / "hi"). State broken!
+The focused UI element is 129 button Transmit

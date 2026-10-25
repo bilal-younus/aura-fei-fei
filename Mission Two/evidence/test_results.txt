@@ -1,0 +1,17 @@
+test_abort_is_absorbing (test_simulator.MissionTests.test_abort_is_absorbing) ... ok
+test_all_slot_orders (test_simulator.MissionTests.test_all_slot_orders) ... ok
+test_channel_one_substitution_recovery (test_simulator.MissionTests.test_channel_one_substitution_recovery) ... ok
+test_correction_reconfirmation (test_simulator.MissionTests.test_correction_reconfirmation) ... ok
+test_greeting_path (test_simulator.MissionTests.test_greeting_path) ... ok
+test_information_identities (test_simulator.MissionTests.test_information_identities) ... ok
+test_invalid_values (test_simulator.MissionTests.test_invalid_values) ... ok
+test_missing_clearance_cannot_authorize (test_simulator.MissionTests.test_missing_clearance_cannot_authorize) ... ok
+test_negation_and_injection (test_simulator.MissionTests.test_negation_and_injection) ... ok
+test_packet_boundaries (test_simulator.MissionTests.test_packet_boundaries) ... ok
+test_recovery (test_simulator.MissionTests.test_recovery) ... ok
+test_uncorrectable_is_erasure (test_simulator.MissionTests.test_uncorrectable_is_erasure) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+OK

@@ -1,0 +1,10 @@
+{
+  "service": "Claude web interface",
+  "visible_model_label": "Sonnet 5.5 Medium",
+  "date": "2026-10-25",
+  "questions": 5,
+  "design": "One batched prompt in a new chat; one response",
+  "collection": "Copied using the response Copy button",
+  "workflow": "Browser, not VS Code or Antigravity",
+  "server_checkpoint": "Not exposed by interface"
+}

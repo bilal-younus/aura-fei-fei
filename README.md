@@ -7,3 +7,5 @@ Squadron Fei-Fei (Group 13): Bilal Younus, Danish Hafeez and Anas Arshad.
 Each mission has its own folder.
 
 - [Mission One](Mission%20One/): Socratic dialogue engine and Galilean ethics debate.
+
+- [Mission Two](Mission%20Two/): FST dialogue manager, Lovelace inquiry and noisy-channel simulator.

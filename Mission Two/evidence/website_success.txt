@@ -1,0 +1,12 @@
+Browser tab: 473662415, Title: "Conversational AI: History, Applications, Future | Starship Dialectic", URL: "https://dlearn-cai.web.app/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~				103 text 1. INIT 2. GREETING 3. COLLECT_SLOTS 4. CONFIRMATION 5. SUCCESS LOCKED ⚠️ FAILURE
+~				107 text sector: Orion Arm warpFactor: Warp 7 clearanceCode: ALPHA-7
+~				127 text FST TRANSDUCER CONSOLE STREAM State:  TERMINAL_SUCCESS 🤖 AURA FST ENGINE State:  INIT
+~				151 text Slot Filled: warpFactor = "Warp 7" 👤 CADET INPUT State:  CONFIRMATION
++				152 text ALPHA-7
++				153 text 🤖 AURA FST ENGINE State:  TERMINAL_SUCCESS
++				154 text CONFIRMATION RECEIVED. Navigation course locked and transmitted to Starship engines. Transducer execution complete!
++				155 image
++				156 text Slot Filled: clearanceCode = "ALPHA-7"
+The focused UI element is 129 button Transmit
