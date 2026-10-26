@@ -1,11 +1,29 @@
-# Mission 03 - Multi-Head Attention, RoPE Vector Rotation & Grouped-Query KV-Cache Optimization
+# AURA / MISSION 03
 
-**Squadron Fei-Fei (Group 13)** | Conversational AI: History, Applications, Future | BTU WS 2026/27  
-**Waypoint:** Pleiades Open Cluster (SEC-03-M45) | **Subsystem 03:** Spatial Attention Matrix & KV-Cache Transceiver  
-**Date:** 26 October 2026 | **Due:** 1 November 2026
+## Multi-Head Attention, RoPE Vector Rotation & Grouped-Query KV-Cache Optimization
 
-**Repository:** https://github.com/bilal-younus/aura-fei-fei  
-**Mission folder:** https://github.com/bilal-younus/aura-fei-fei/tree/main/Mission%20Three
+Conversational AI: History, Applications, Future  
+BTU Winter Semester 2026/27 | Squadron Fei-Fei (Group 13)  
+26 October 2026
+
+**Repository:** [github.com/bilal-younus/aura-fei-fei](https://github.com/bilal-younus/aura-fei-fei)  
+**Mission folder:** [Mission Three](https://github.com/bilal-younus/aura-fei-fei/tree/main/Mission%20Three)
+
+### Team roles
+
+| Member | Assigned station and scope |
+|---|---|
+| Bilal Younus | Systems Architect: multi-head self-attention core, variance test, notebook integration and repository |
+| Danish Hafeez | Communications & Protocol Officer: RoPE engine, relative invariance check and RoPE vs ALiBi decay plot |
+| Anas Arshad | Data & Payload Specialist; Security & Ethics Sentinel: GQA and KV-cache benchmark, FlashAttention IO derivation and KV-cache DoS audit |
+
+Three members cover four station roles. The table records the team role allocation.
+
+### Implemented and observed
+
+The PyTorch implementation builds multi-head self-attention from scratch with causal masking, Rotary Position Embeddings, Grouped-Query Attention and a stateful KV-cache. Scaling by 1/√d_k restores unit score variance (1.0027 at d_k = 64), and the attention output matches PyTorch's fused kernel to 6e-8. RoPE scores stay invariant under position shifts (maximum relative error 2.4e-6 over 200 random trials). Cached decoding reproduces the full forward pass, and at 32,768 tokens GQA 4:1 decodes 4.4x faster than MHA with a 4x smaller cache. The security audit derives FlashAttention's IO complexity and shows one 80 GB accelerator running out of memory at the 8th 64k-token session; PagedAttention with per-client quotas serves 133 of 160 legitimate chats instead of 6.
+
+**Execution and evaluation:** all four scripts, the 18-test unit suite and the integrated notebook `ps03_solution.ipynb` were executed locally on 26 October 2026 (macOS, Intel Core i7-9750H, Python 3.9.6, PyTorch 2.2.2, CPU). All tests passed and the notebook ran without errors. Raw outputs, benchmark JSON and the RoPE/ALiBi plot are preserved in `evidence/`.
 
 ---
 
