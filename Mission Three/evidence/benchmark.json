@@ -1,0 +1,145 @@
+{
+  "model": {
+    "layers": 32,
+    "q_heads": 32,
+    "head_dim": 128,
+    "d_model": 4096,
+    "bytes_per_value": 2
+  },
+  "tokens_per_second": 50,
+  "rows": [
+    {
+      "seq_len": 1024,
+      "variant": "MHA 32:32",
+      "kv_heads": 32,
+      "kv_cache_mb_32_layers_fp16": 512.0,
+      "bandwidth_gb_s_at_50_tok_s": 26.8435456,
+      "measured_cache_mb_1_layer_fp32": 32.0,
+      "measured_ms_per_token_1_layer_cpu": 17.81314700000003
+    },
+    {
+      "seq_len": 1024,
+      "variant": "GQA 32:8 (4:1)",
+      "kv_heads": 8,
+      "kv_cache_mb_32_layers_fp16": 128.0,
+      "bandwidth_gb_s_at_50_tok_s": 6.7108864,
+      "measured_cache_mb_1_layer_fp32": 8.0,
+      "measured_ms_per_token_1_layer_cpu": 8.977613999999967
+    },
+    {
+      "seq_len": 1024,
+      "variant": "MQA 32:1",
+      "kv_heads": 1,
+      "kv_cache_mb_32_layers_fp16": 16.0,
+      "bandwidth_gb_s_at_50_tok_s": 0.8388608,
+      "measured_cache_mb_1_layer_fp32": 1.0,
+      "measured_ms_per_token_1_layer_cpu": 8.791349000000004
+    },
+    {
+      "seq_len": 4096,
+      "variant": "MHA 32:32",
+      "kv_heads": 32,
+      "kv_cache_mb_32_layers_fp16": 2048.0,
+      "bandwidth_gb_s_at_50_tok_s": 107.3741824,
+      "measured_cache_mb_1_layer_fp32": 128.0,
+      "measured_ms_per_token_1_layer_cpu": 26.279274000000186
+    },
+    {
+      "seq_len": 4096,
+      "variant": "GQA 32:8 (4:1)",
+      "kv_heads": 8,
+      "kv_cache_mb_32_layers_fp16": 512.0,
+      "bandwidth_gb_s_at_50_tok_s": 26.8435456,
+      "measured_cache_mb_1_layer_fp32": 32.0,
+      "measured_ms_per_token_1_layer_cpu": 10.337730999999906
+    },
+    {
+      "seq_len": 4096,
+      "variant": "MQA 32:1",
+      "kv_heads": 1,
+      "kv_cache_mb_32_layers_fp16": 64.0,
+      "bandwidth_gb_s_at_50_tok_s": 3.3554432,
+      "measured_cache_mb_1_layer_fp32": 4.0,
+      "measured_ms_per_token_1_layer_cpu": 8.772759000000185
+    },
+    {
+      "seq_len": 16384,
+      "variant": "MHA 32:32",
+      "kv_heads": 32,
+      "kv_cache_mb_32_layers_fp16": 8192.0,
+      "bandwidth_gb_s_at_50_tok_s": 429.4967296,
+      "measured_cache_mb_1_layer_fp32": 512.0,
+      "measured_ms_per_token_1_layer_cpu": 45.58294899999993
+    },
+    {
+      "seq_len": 16384,
+      "variant": "GQA 32:8 (4:1)",
+      "kv_heads": 8,
+      "kv_cache_mb_32_layers_fp16": 2048.0,
+      "bandwidth_gb_s_at_50_tok_s": 107.3741824,
+      "measured_cache_mb_1_layer_fp32": 128.0,
+      "measured_ms_per_token_1_layer_cpu": 14.82124099999993
+    },
+    {
+      "seq_len": 16384,
+      "variant": "MQA 32:1",
+      "kv_heads": 1,
+      "kv_cache_mb_32_layers_fp16": 256.0,
+      "bandwidth_gb_s_at_50_tok_s": 13.4217728,
+      "measured_cache_mb_1_layer_fp32": 16.0,
+      "measured_ms_per_token_1_layer_cpu": 9.679116999999238
+    },
+    {
+      "seq_len": 32768,
+      "variant": "MHA 32:32",
+      "kv_heads": 32,
+      "kv_cache_mb_32_layers_fp16": 16384.0,
+      "bandwidth_gb_s_at_50_tok_s": 858.9934592,
+      "measured_cache_mb_1_layer_fp32": 1024.0,
+      "measured_ms_per_token_1_layer_cpu": 87.54170300000119
+    },
+    {
+      "seq_len": 32768,
+      "variant": "GQA 32:8 (4:1)",
+      "kv_heads": 8,
+      "kv_cache_mb_32_layers_fp16": 4096.0,
+      "bandwidth_gb_s_at_50_tok_s": 214.7483648,
+      "measured_cache_mb_1_layer_fp32": 256.0,
+      "measured_ms_per_token_1_layer_cpu": 20.039558000000568
+    },
+    {
+      "seq_len": 32768,
+      "variant": "MQA 32:1",
+      "kv_heads": 1,
+      "kv_cache_mb_32_layers_fp16": 512.0,
+      "bandwidth_gb_s_at_50_tok_s": 26.8435456,
+      "measured_cache_mb_1_layer_fp32": 32.0,
+      "measured_ms_per_token_1_layer_cpu": 11.253405000001493
+    }
+  ],
+  "cache_vs_recompute": [
+    {
+      "context": 256,
+      "cached_ms": 8.49322999999913,
+      "recompute_ms": 74.03569599999926
+    },
+    {
+      "context": 1024,
+      "cached_ms": 8.26404000000025,
+      "recompute_ms": 382.1225900000016
+    },
+    {
+      "context": 2048,
+      "cached_ms": 9.399297000001638,
+      "recompute_ms": 1110.7902369999997
+    }
+  ],
+  "hardware": {
+    "platform": "macOS-26.4.1-x86_64-i386-64bit",
+    "processor": "i386",
+    "torch": "2.2.2",
+    "threads": 6,
+    "device": "cpu"
+  },
+  "notes": "KV-cache MB and GB/s are analytic for a 32-layer fp16 LLaMA-3-8B-like model (cache traffic only, weights excluded). Latency is measured: one attention layer, fp32, batch 1, CPU, median of 9."
+}

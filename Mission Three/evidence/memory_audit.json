@@ -1,0 +1,153 @@
+{
+  "flash": {
+    "head_dim": 128,
+    "sram_bytes": 196608,
+    "sram_elements": 98304,
+    "rows": [
+      {
+        "N": 1024,
+        "standard_io_M": 4.718592,
+        "flash_io_M": 2.62144,
+        "io_ratio": 1.8,
+        "score_matrix_mib_per_head": 2.0,
+        "flash_extra_kib_per_head": 8.0
+      },
+      {
+        "N": 4096,
+        "standard_io_M": 69.206016,
+        "flash_io_M": 35.651584,
+        "io_ratio": 1.9411764705882353,
+        "score_matrix_mib_per_head": 32.0,
+        "flash_extra_kib_per_head": 32.0
+      },
+      {
+        "N": 16384,
+        "standard_io_M": 1082.130432,
+        "flash_io_M": 545.25952,
+        "io_ratio": 1.9846153846153847,
+        "score_matrix_mib_per_head": 512.0,
+        "flash_extra_kib_per_head": 128.0
+      },
+      {
+        "N": 65536,
+        "standard_io_M": 17213.423616,
+        "flash_io_M": 8623.489024,
+        "io_ratio": 1.9961089494163424,
+        "score_matrix_mib_per_head": 8192.0,
+        "flash_extra_kib_per_head": 512.0
+      }
+    ]
+  },
+  "kv_bytes_per_token": {
+    "MHA 32:32": 524288,
+    "GQA 32:8": 131072,
+    "MQA 32:1": 16384,
+    "MLA d_c=512+64": 36864
+  },
+  "gpu": {
+    "gpu_gib": 80.0,
+    "utilization": 0.9,
+    "weights_gib": 14.957040548324585,
+    "kv_budget_gib": 57.042959451675415,
+    "max_context": 65536,
+    "block_tokens": 16
+  },
+  "sessions_at_65536": {
+    "MHA 32:32": 1,
+    "GQA 32:8": 7,
+    "MQA 32:1": 57,
+    "MLA d_c=512+64": 25
+  },
+  "simulations": [
+    {
+      "policy": "contiguous",
+      "kv": "GQA 32:8",
+      "bytes_per_token": 131072,
+      "arrivals": 200,
+      "first_oom_at_arrival": 8,
+      "admitted": {
+        "cadet": 6,
+        "rogue": 1
+      },
+      "refused": {
+        "cadet": 154,
+        "rogue": 39
+      },
+      "reserved_gib": 56.0,
+      "used_gib": 9.8546142578125,
+      "wasted_pct": 82.40247453962053
+    },
+    {
+      "policy": "paged",
+      "kv": "GQA 32:8",
+      "bytes_per_token": 131072,
+      "arrivals": 200,
+      "first_oom_at_arrival": 35,
+      "admitted": {
+        "cadet": 28,
+        "rogue": 6
+      },
+      "refused": {
+        "cadet": 132,
+        "rogue": 34
+      },
+      "reserved_gib": 57.017578125,
+      "used_gib": 56.9915771484375,
+      "wasted_pct": 0.045601685335527886
+    },
+    {
+      "policy": "paged+quota",
+      "kv": "GQA 32:8",
+      "bytes_per_token": 131072,
+      "arrivals": 200,
+      "first_oom_at_arrival": 167,
+      "admitted": {
+        "cadet": 133,
+        "rogue": 2
+      },
+      "refused": {
+        "cadet": 27,
+        "rogue": 38
+      },
+      "reserved_gib": 56.994140625,
+      "used_gib": 56.866943359375,
+      "wasted_pct": 0.22317603920358753
+    },
+    {
+      "policy": "paged",
+      "kv": "MLA d_c=512+64",
+      "bytes_per_token": 36864,
+      "arrivals": 200,
+      "first_oom_at_arrival": 111,
+      "admitted": {
+        "cadet": 89,
+        "rogue": 22
+      },
+      "refused": {
+        "cadet": 71,
+        "rogue": 18
+      },
+      "reserved_gib": 57.0355224609375,
+      "used_gib": 57.011661529541016,
+      "wasted_pct": 0.04183521140325164
+    },
+    {
+      "policy": "paged+quota",
+      "kv": "MLA d_c=512+64",
+      "bytes_per_token": 36864,
+      "arrivals": 200,
+      "first_oom_at_arrival": null,
+      "admitted": {
+        "cadet": 160,
+        "rogue": 2
+      },
+      "refused": {
+        "cadet": 0,
+        "rogue": 38
+      },
+      "reserved_gib": 18.31475830078125,
+      "used_gib": 18.272323608398438,
+      "wasted_pct": 0.23169670975675682
+    }
+  ]
+}

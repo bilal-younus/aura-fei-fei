@@ -1,0 +1,23 @@
+test_future_tokens_do_not_change_past_outputs (test_mission03.Part1AttentionTests) ... ok
+test_matches_torch_reference (test_mission03.Part1AttentionTests) ... ok
+test_padding_mask (test_mission03.Part1AttentionTests) ... ok
+test_shapes_and_causal_mask (test_mission03.Part1AttentionTests) ... ok
+test_variance_preservation (test_mission03.Part1AttentionTests) ... ok
+test_frequencies (test_mission03.Part2RopeTests) ... ok
+test_long_range_decay (test_mission03.Part2RopeTests) ... ok
+test_matches_explicit_2d_rotation (test_mission03.Part2RopeTests) ... ok
+test_norm_preserved_and_position_zero_is_identity (test_mission03.Part2RopeTests) ... ok
+test_relative_invariance (test_mission03.Part2RopeTests) ... ok
+test_score_depends_only_on_offset (test_mission03.Part2RopeTests) ... ok
+test_cache_memory_and_overflow (test_mission03.Part3GqaCacheTests) ... ok
+test_cached_decoding_equals_full_forward (test_mission03.Part3GqaCacheTests) ... ok
+test_kv_cache_sizes (test_mission03.Part3GqaCacheTests) ... ok
+test_matches_repeat_interleave_reference (test_mission03.Part3GqaCacheTests) ... ok
+test_io_formulas (test_mission03.Part4AuditTests) ... ok
+test_kv_per_token (test_mission03.Part4AuditTests) ... ok
+test_mitigations_admit_more_legitimate_sessions (test_mission03.Part4AuditTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.082s
+
+OK

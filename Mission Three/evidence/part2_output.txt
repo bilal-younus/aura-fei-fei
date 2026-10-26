@@ -1,0 +1,10 @@
+=== Part 2: RoPE relative shift invariance ===
+Example: <RoPE(q,763),RoPE(k,2235)> = 5.775354; shifted by delta=379: 5.775355
+200 random (q, k, m, n, delta) trials, max relative error 2.38e-06
+Rotation preserves vector norms: True
+
+=== Part 2: Distance decay (RoPE self-similarity, head_dim=128) ===
+d=0: +1.000 | d=1: +0.970 | d=4: +0.759 | d=16: +0.620 | d=64: +0.477 | d=256: +0.321 | d=1024: +0.204 | d=2048: +0.119
+ALiBi slopes for 8 heads: ['1/2', '1/4', '1/8', '1/16', '1/32', '1/64', '1/128', '1/256']
+Plot saved: evidence/rope_vs_alibi.png
+[PASS] RoPE engine verified.

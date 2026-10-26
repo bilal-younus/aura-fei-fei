@@ -1,0 +1,21 @@
+=== Part 4: HBM element accesses per head (d=128, SRAM 192 KiB) ===
+     N | Standard (M) | Flash (M) | ratio | S matrix MiB | Flash m,l KiB
+  1024 |          4.7 |       2.6 |  1.80 |            2 |             8
+  4096 |         69.2 |      35.7 |  1.94 |           32 |            32
+ 16384 |       1082.1 |     545.3 |  1.98 |          512 |           128
+ 65536 |      17213.4 |    8623.5 |  2.00 |         8192 |           512
+
+=== Part 4: KV-cache budget: 80 GiB x 0.9 - 15.0 GiB weights = 57.0 GiB ===
+MHA 32:32         512.0 KiB/token |  32.00 GiB per 65,536-token session |   1 sessions before OOM
+GQA 32:8          128.0 KiB/token |   8.00 GiB per 65,536-token session |   7 sessions before OOM
+MQA 32:1           16.0 KiB/token |   1.00 GiB per 65,536-token session |  57 sessions before OOM
+MLA d_c=512+64     36.0 KiB/token |   2.25 GiB per 65,536-token session |  25 sessions before OOM
+
+=== Part 4: DoS simulation (160 cadet chats, 1 rogue 65k session per 4 chats) ===
+Policy       | KV              | 1st OOM | cadets ok | rogue ok | reserved GiB | wasted
+contiguous   | GQA 32:8        |       8 |     6/160 |     1/40 |         56.0 | 82.40%
+paged        | GQA 32:8        |      35 |    28/160 |     6/40 |         57.0 |  0.05%
+paged+quota  | GQA 32:8        |     167 |   133/160 |     2/40 |         57.0 |  0.22%
+paged        | MLA d_c=512+64  |     111 |    89/160 |    22/40 |         57.0 |  0.04%
+paged+quota  | MLA d_c=512+64  |    None |   160/160 |     2/40 |         18.3 |  0.23%
+Saved evidence/memory_audit.json

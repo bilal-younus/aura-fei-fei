@@ -1,0 +1,10 @@
+# Parts 1-3, tests and plot. PyTorch 2.4+ is the course standard; 2.2.2 is the last Intel-Mac build
+# and was used for the recorded run (it needs numpy<2).
+torch>=2.2.2
+numpy<2
+matplotlib>=3.7
+# Optional: rebuild the executed notebook and the PDF report.
+nbformat>=5
+nbclient>=0.8
+ipykernel>=6
+markdown>=3.4

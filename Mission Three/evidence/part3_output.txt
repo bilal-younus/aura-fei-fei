@@ -1,0 +1,29 @@
+=== Part 3: KV-cache correctness ===
+Prefill 16 + decode 8 tokens vs full forward: max diff 1.64e-07
+Grouped GQA vs repeat_interleave + torch SDPA: max diff 1.64e-07
+Cache holds 24 tokens, 0.023 MB
+
+=== Part 3: MHA vs GQA vs MQA benchmark ===
+     N | Variant         | KV-cache MB | GB/s @50 tok/s | 1-layer MB | ms/token
+----------------------------------------------------------------------------------
+  1024 | MHA 32:32       |       512.0 |          26.84 |       32.0 |    17.81
+  1024 | GQA 32:8 (4:1)  |       128.0 |           6.71 |        8.0 |     8.98
+  1024 | MQA 32:1        |        16.0 |           0.84 |        1.0 |     8.79
+  4096 | MHA 32:32       |      2048.0 |         107.37 |      128.0 |    26.28
+  4096 | GQA 32:8 (4:1)  |       512.0 |          26.84 |       32.0 |    10.34
+  4096 | MQA 32:1        |        64.0 |           3.36 |        4.0 |     8.77
+ 16384 | MHA 32:32       |      8192.0 |         429.50 |      512.0 |    45.58
+ 16384 | GQA 32:8 (4:1)  |      2048.0 |         107.37 |      128.0 |    14.82
+ 16384 | MQA 32:1        |       256.0 |          13.42 |       16.0 |     9.68
+ 32768 | MHA 32:32       |     16384.0 |         858.99 |     1024.0 |    87.54
+ 32768 | GQA 32:8 (4:1)  |      4096.0 |         214.75 |      256.0 |    20.04
+ 32768 | MQA 32:1        |       512.0 |          26.84 |       32.0 |    11.25
+----------------------------------------------------------------------------------
+KV-cache MB, GB/s: 32 layers, fp16 (analytic). 1-layer MB, ms/token: measured, fp32 CPU.
+
+Cached decode vs full recompute (GQA 32:8, one layer, ms per new token):
+  context   256: cached    8.49 ms | recompute    74.04 ms | speed-up x8.7
+  context  1024: cached    8.26 ms | recompute   382.12 ms | speed-up x46.2
+  context  2048: cached    9.40 ms | recompute  1110.79 ms | speed-up x118.2
+Saved evidence/benchmark.json
+[PASS] GQA and KV-cache verified.

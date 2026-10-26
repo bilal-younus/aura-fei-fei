@@ -1,0 +1,13 @@
+=== Part 1: Variance preservation ===
+  d_k |  Var(q.k) | Var(q.k/sqrt(d_k)) | result
+   16 |    16.311 |             1.0195 | PASS
+   64 |    64.176 |             1.0027 | PASS
+  128 |   128.128 |             1.0010 | PASS
+Mean max softmax weight, d_k=64: unscaled 0.771, scaled 0.069
+
+=== Part 1: Multi-head forward pass ===
+Input (2, 16, 256) -> output (2, 16, 256), attention (2, 4, 16, 16)
+Max attention weight on future tokens: 0.0e+00 (causal mask)
+Rows sum to 1: True
+Max |ours - torch SDPA| = 5.96e-08
+[PASS] Multi-head attention core verified.
