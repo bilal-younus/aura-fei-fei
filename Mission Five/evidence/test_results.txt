@@ -1,0 +1,25 @@
+test_bm25_manual (test_ps05.RetrievalTests.test_bm25_manual) ... ok
+test_bm25_missing_and_empty (test_ps05.RetrievalTests.test_bm25_missing_and_empty) ... ok
+test_canonical_hidden_override (test_ps05.RetrievalTests.test_canonical_hidden_override) ... ok
+test_cosine_invariance (test_ps05.RetrievalTests.test_cosine_invariance) ... ok
+test_cosine_opposite (test_ps05.RetrievalTests.test_cosine_opposite) ... ok
+test_degree_and_membership (test_ps05.RetrievalTests.test_degree_and_membership) ... ok
+test_dimension_validation (test_ps05.RetrievalTests.test_dimension_validation) ... ok
+test_empty_citation_denominator (test_ps05.RetrievalTests.test_empty_citation_denominator) ... ok
+test_empty_index (test_ps05.RetrievalTests.test_empty_index) ... ok
+test_exact_hyphen_identifier (test_ps05.RetrievalTests.test_exact_hyphen_identifier) ... ok
+test_fixture_injection_results (test_ps05.RetrievalTests.test_fixture_injection_results) ... ok
+test_layer_assignment_reproducible (test_ps05.RetrievalTests.test_layer_assignment_reproducible) ... ok
+test_no_faithfulness_by_invented_number (test_ps05.RetrievalTests.test_no_faithfulness_by_invented_number) ... ok
+test_null_metrics_for_no_claims (test_ps05.RetrievalTests.test_null_metrics_for_no_claims) ... ok
+test_precision_fraction (test_ps05.RetrievalTests.test_precision_fraction) ... ok
+test_rrf_deduplicates (test_ps05.RetrievalTests.test_rrf_deduplicates) ... ok
+test_rrf_one_based_and_missing (test_ps05.RetrievalTests.test_rrf_one_based_and_missing) ... ok
+test_singleton_and_duplicate (test_ps05.RetrievalTests.test_singleton_and_duplicate) ... ok
+test_small_recall_against_flat (test_ps05.RetrievalTests.test_small_recall_against_flat) ... ok
+test_zero_nonfinite_rejected (test_ps05.RetrievalTests.test_zero_nonfinite_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.039s
+
+OK

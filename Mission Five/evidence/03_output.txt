@@ -1,0 +1,15 @@
+{
+  "notebook_url": "https://notebook.google.com/notebook/aeb75cf6-a203-47f7-ad6c-51d8df76a7df",
+  "sources": [
+    "Document_A_RAG.pdf",
+    "Document_B_GraphRAG.pdf",
+    "Document_C_Course_Website_Summary.pdf"
+  ],
+  "citation_occurrences": 17,
+  "entailed_citations": 9,
+  "citation_precision": 0.5294117647058824,
+  "scoring_rule": "Strict single-span badge-level entailment of the whole attached sentence. Partial support counts as false; grouped citation support can be stronger than this deliberately conservative metric.",
+  "negative_probes": 3,
+  "refusals": 3
+}
+Audio status: evaluated

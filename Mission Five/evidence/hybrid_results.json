@@ -1,0 +1,229 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "corpus_chunks": 22,
+  "k1": 1.5,
+  "b": 0.75,
+  "rrf_k": 60,
+  "queries": [
+    {
+      "id": "concept_memory",
+      "query": "How can an assistant remember relevant past facts without identical wording?",
+      "relevant": [
+        "semantic_memory",
+        "rag_memory"
+      ],
+      "kind": "conceptual",
+      "dense": [
+        "semantic_memory",
+        "rag_memory",
+        "source_audio",
+        "rag_update",
+        "injection_good",
+        "hnsw_tradeoff",
+        "source_refusal",
+        "bm25_mechanics",
+        "lexical_manual",
+        "rag_sequence"
+      ],
+      "dense_hit_at_1": true,
+      "dense_hit_at_3": true,
+      "dense_recall_at_3": 1.0,
+      "sparse": [
+        "semantic_memory",
+        "rag_update",
+        "source_refusal",
+        "rag_sequence",
+        "graph_pipeline",
+        "hnsw_hierarchy"
+      ],
+      "sparse_hit_at_1": true,
+      "sparse_hit_at_3": true,
+      "sparse_recall_at_3": 0.5,
+      "fused": [
+        "semantic_memory",
+        "rag_update",
+        "source_refusal",
+        "rag_sequence",
+        "rag_memory"
+      ],
+      "fused_hit_at_1": true,
+      "fused_hit_at_3": true,
+      "fused_recall_at_3": 0.5
+    },
+    {
+      "id": "concept_global",
+      "query": "How do we synthesize the main themes across the entire document collection?",
+      "relevant": [
+        "graph_global",
+        "graph_reduce"
+      ],
+      "kind": "conceptual",
+      "dense": [
+        "graph_global",
+        "graph_reduce",
+        "rag_update",
+        "graph_pipeline",
+        "source_audio",
+        "rag_memory",
+        "semantic_memory",
+        "rrf_rank",
+        "bm25_mechanics",
+        "lexical_manual"
+      ],
+      "dense_hit_at_1": true,
+      "dense_hit_at_3": true,
+      "dense_recall_at_3": 1.0,
+      "sparse": [
+        "graph_global",
+        "rrf_rank",
+        "rag_update",
+        "bm25_mechanics",
+        "source_refusal",
+        "ship_power",
+        "ship_sensor",
+        "ship_cooling",
+        "ship_cooling_near",
+        "rag_sequence"
+      ],
+      "sparse_hit_at_1": true,
+      "sparse_hit_at_3": true,
+      "sparse_recall_at_3": 0.5,
+      "fused": [
+        "graph_global",
+        "rag_update",
+        "rrf_rank",
+        "bm25_mechanics",
+        "graph_reduce"
+      ],
+      "fused_hit_at_1": true,
+      "fused_hit_at_3": true,
+      "fused_recall_at_3": 0.5
+    },
+    {
+      "id": "exact_serial",
+      "query": "XQ-17B-904",
+      "relevant": [
+        "ship_cooling"
+      ],
+      "kind": "exact identifier",
+      "dense": [
+        "ship_cooling_near",
+        "ship_cooling",
+        "lexical_manual",
+        "ship_spares",
+        "ship_power",
+        "bm25_mechanics",
+        "rrf_rank",
+        "ship_sensor",
+        "graph_pipeline",
+        "source_refusal"
+      ],
+      "dense_hit_at_1": false,
+      "dense_hit_at_3": true,
+      "dense_recall_at_3": 1.0,
+      "sparse": [
+        "ship_cooling"
+      ],
+      "sparse_hit_at_1": true,
+      "sparse_hit_at_3": true,
+      "sparse_recall_at_3": 1.0,
+      "fused": [
+        "ship_cooling",
+        "ship_cooling_near",
+        "lexical_manual",
+        "ship_spares",
+        "ship_power"
+      ],
+      "fused_hit_at_1": true,
+      "fused_hit_at_3": true,
+      "fused_recall_at_3": 1.0
+    },
+    {
+      "id": "exact_sensor",
+      "query": "ST-83-112",
+      "relevant": [
+        "ship_sensor"
+      ],
+      "kind": "exact identifier",
+      "dense": [
+        "ship_spares",
+        "lexical_manual",
+        "source_refusal",
+        "ship_sensor",
+        "ship_cooling_near",
+        "ship_cooling",
+        "hnsw_hierarchy",
+        "semantic_memory",
+        "injection_good",
+        "hnsw_tradeoff"
+      ],
+      "dense_hit_at_1": false,
+      "dense_hit_at_3": false,
+      "dense_recall_at_3": 0.0,
+      "sparse": [
+        "ship_sensor"
+      ],
+      "sparse_hit_at_1": true,
+      "sparse_hit_at_3": true,
+      "sparse_recall_at_3": 1.0,
+      "fused": [
+        "ship_sensor",
+        "ship_spares",
+        "lexical_manual",
+        "source_refusal",
+        "ship_cooling_near"
+      ],
+      "fused_hit_at_1": true,
+      "fused_hit_at_3": true,
+      "fused_recall_at_3": 1.0
+    },
+    {
+      "id": "mixed",
+      "query": "Which power controller feeds the Beryl coolant pump?",
+      "relevant": [
+        "ship_power"
+      ],
+      "kind": "mixed",
+      "dense": [
+        "ship_power",
+        "ship_sensor",
+        "ship_spares",
+        "ship_cooling",
+        "ship_cooling_near",
+        "unknown_models",
+        "source_refusal",
+        "graph_pipeline",
+        "source_audio",
+        "lexical_manual"
+      ],
+      "dense_hit_at_1": true,
+      "dense_hit_at_3": true,
+      "dense_recall_at_3": 1.0,
+      "sparse": [
+        "ship_power",
+        "ship_sensor",
+        "ship_cooling",
+        "ship_spares",
+        "ship_cooling_near",
+        "source_refusal",
+        "rag_sequence",
+        "source_audio",
+        "unknown_models",
+        "hnsw_tradeoff"
+      ],
+      "sparse_hit_at_1": true,
+      "sparse_hit_at_3": true,
+      "sparse_recall_at_3": 1.0,
+      "fused": [
+        "ship_power",
+        "ship_sensor",
+        "ship_cooling",
+        "ship_spares",
+        "ship_cooling_near"
+      ],
+      "fused_hit_at_1": true,
+      "fused_hit_at_3": true,
+      "fused_recall_at_3": 1.0
+    }
+  ]
+}

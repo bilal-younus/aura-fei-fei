@@ -1,0 +1,227 @@
+[
+  {
+    "start": 0.0,
+    "end": 3.8000000000000003,
+    "text": "You know, you interact with artificial intelligence every single day."
+  },
+  {
+    "start": 3.84,
+    "end": 4.24,
+    "text": "Right."
+  },
+  {
+    "start": 4.28,
+    "end": 4.5600000000000005,
+    "text": "Yeah."
+  },
+  {
+    "start": 4.92,
+    "end": 5.88,
+    "text": "We all do at this point."
+  },
+  {
+    "start": 6.08,
+    "end": 9.44,
+    "text": "Yeah, you type in a question and it answers you with this."
+  },
+  {
+    "start": 10.68,
+    "end": 13.32,
+    "text": "Absolute, unshakable confidence."
+  },
+  {
+    "start": 13.36,
+    "end": 14.32,
+    "text": "Oh, totally unshakable."
+  },
+  {
+    "start": 14.48,
+    "end": 19.36,
+    "text": "But as a user, you know, navigating this just overwhelming ocean of information,"
+  },
+  {
+    "start": 19.68,
+    "end": 21.6,
+    "text": "how do you actually know what it knows?"
+  },
+  {
+    "start": 21.64,
+    "end": 22.72,
+    "text": "That is the big question."
+  },
+  {
+    "start": 22.92,
+    "end": 23.2,
+    "text": "Right."
+  },
+  {
+    "start": 23.240000000000002,
+    "end": 25.84,
+    "text": "And more importantly, how can you force it to prove it?"
+  },
+  {
+    "start": 26.12,
+    "end": 28.96,
+    "text": "I mean, it's really the central tension of modern AI right now."
+  },
+  {
+    "start": 28.96,
+    "end": 33.2,
+    "text": "We want these systems to be, you know, perfect encyclopedias."
+  },
+  {
+    "start": 33.2,
+    "end": 37.120000000000005,
+    "text": "But fundamentally, they are just these complex webs of probability."
+  },
+  {
+    "start": 37.120000000000005,
+    "end": 37.620000000000005,
+    "text": "Right."
+  },
+  {
+    "start": 37.620000000000005,
+    "end": 39.120000000000005,
+    "text": "They're not just databases."
+  },
+  {
+    "start": 39.120000000000005,
+    "end": 40.120000000000005,
+    "text": "Exactly."
+  },
+  {
+    "start": 40.120000000000005,
+    "end": 42.6,
+    "text": "They aren't pulling a saved file from a hard drive."
+  },
+  {
+    "start": 42.6,
+    "end": 49.16,
+    "text": "They are reasoning and, uh, honestly, sometimes guessing through massive amounts of human knowledge."
+  },
+  {
+    "start": 49.16,
+    "end": 51.44,
+    "text": "And mapping exactly how they do that?"
+  },
+  {
+    "start": 51.44,
+    "end": 52.96,
+    "text": "That is our mission for this deep dive."
+  },
+  {
+    "start": 52.96,
+    "end": 54.24,
+    "text": "It's going to be a fun one."
+  },
+  {
+    "start": 54.24,
+    "end": 55.24,
+    "text": "It is."
+  },
+  {
+    "start": 55.24,
+    "end": 58.0,
+    "text": "We have a really fascinating stack of sources to guide us today."
+  },
+  {
+    "start": 58.0,
+    "end": 65.9,
+    "text": "There's this foundational research paper from Facebook AI and a few others that introduces a technique called rag retrieval augmented generation"
+  },
+  {
+    "start": 65.98,
+    "end": 71.58,
+    "text": "Yes, exactly and then a newer paper from Microsoft research on something called graph rag, which"
+  },
+  {
+    "start": 72.24,
+    "end": 77.1,
+    "text": "Looks at how AI synthesizes entire massive data sets huge data sets"
+  },
+  {
+    "start": 77.1,
+    "end": 83.74000000000001,
+    "text": "Yeah, and finally we have a clearly labeled course summary document detailing the no sphere grounding protocol"
+  },
+  {
+    "start": 83.74,
+    "end": 85.1,
+    "text": "which is super interesting."
+  },
+  {
+    "start": 85.1,
+    "end": 86.02,
+    "text": "It really is."
+  },
+  {
+    "start": 86.02,
+    "end": 87.42,
+    "text": "It gives us a practical framework"
+  },
+  {
+    "start": 87.42,
+    "end": 88.89999999999999,
+    "text": "for making these systems trustworthy."
+  },
+  {
+    "start": 88.89999999999999,
+    "end": 92.86,
+    "text": "So we're going to travel from how models fetch single specific facts"
+  },
+  {
+    "start": 92.86,
+    "end": 95.69999999999999,
+    "text": "to how they map entire information ecosystems."
+  },
+  {
+    "start": 95.69999999999999,
+    "end": 100.17999999999999,
+    "text": "And finally, how we literally force them to admit what they simply don't know."
+  },
+  {
+    "start": 100.17999999999999,
+    "end": 100.97999999999999,
+    "text": "I love it."
+  },
+  {
+    "start": 100.97999999999999,
+    "end": 102.61999999999999,
+    "text": "Okay, let's unpack this."
+  },
+  {
+    "start": 102.61999999999999,
+    "end": 105.69999999999999,
+    "text": "So to really appreciate that first paper on RAG,"
+  },
+  {
+    "start": 105.69999999999999,
+    "end": 109.06,
+    "text": "you kind of have to understand the core problem that is trying to solve."
+  },
+  {
+    "start": 109.06,
+    "end": 109.82,
+    "text": "Right."
+  },
+  {
+    "start": 109.82,
+    "end": 112.1,
+    "text": "Think about large pre-trained language models."
+  },
+  {
+    "start": 112.1,
+    "end": 115.66,
+    "text": "systems like BART or a T5."
+  },
+  {
+    "start": 115.66,
+    "end": 117.46,
+    "text": "And just for clarity for everyone listening,"
+  },
+  {
+    "start": 117.46,
+    "end": 120,
+    "text": "when we say BART or T5, we are talking about"
+  }
+]

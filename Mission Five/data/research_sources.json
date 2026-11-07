@@ -1,0 +1,12 @@
+[
+  {
+    "filename": "Document_A_RAG.pdf",
+    "url": "https://arxiv.org/pdf/2005.11401",
+    "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233"
+  },
+  {
+    "filename": "Document_B_GraphRAG.pdf",
+    "url": "https://arxiv.org/pdf/2404.16130",
+    "sha256": "730f1a9f38d16689900969a3eeeb1b31e45eda1dcc1f37a043afa90aff76c867"
+  }
+]

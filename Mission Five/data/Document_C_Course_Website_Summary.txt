@@ -1,0 +1,11 @@
+Document C - Noosphere grounding protocol: course website summary
+
+Provenance: Week 5, Sources & Lore, Node 04: AURA Subsystem 05: The Alexandrite Deep Archive & NotebookLM Protocol, https://dlearn-cai.web.app/, accessed 7 November 2026. Also checked Week 5 Mission / Step-by-Step Parts and the official course repository at commit aab9da8b611825bc1599d99cf13f1179d7a110c2.
+
+This is a labelled replacement assembled from the public course website. The separately named USSE Noosphere Technical Archive Extract was not found in those locations. This document is not represented as that missing original and contains no invented engineering specifications.
+
+The course's fictional mission concerns corrupted ship archives and the restoration of source-grounded answers. Its Week 5 lore describes an archive crisis involving the Kepler Concordance and a NotebookLM-style protocol for verifiable information.
+
+The protocol calls for claims tied to inspectable source passages, acknowledgement when the available sources cannot answer a question, and conversational audio that remains faithful to the supplied material. The mission's audio debrief illustrates those principles in a fictional starship setting; it is not empirical evidence that a real retrieval system achieves perfect citation accuracy.
+
+The assignment asks for hybrid retrieval, a NotebookLM citation and refusal audit, and a dual-host Audio Overview evaluation. The archive lore provides motivation and expected behavior, not hardware temperatures, propulsion serial codes, or measured safety guarantees.

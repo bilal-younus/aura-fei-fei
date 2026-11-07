@@ -1,0 +1,6 @@
+Source audit: answer the following five questions separately as Q1-Q5. Use at most two factual sentences per answer, each with an interactive numeric source citation. Do not use outside knowledge. Explicitly identify Document C as a course-summary substitute, not the missing original technical archive.
+Q1. How does the separation of parametric and non-parametric memory in Lewis et al. address the corrupted-archive motivation in Document C, and what different global problem motivates Edge et al.?
+Q2. How do RAG-Sequence and RAG-Token differ in retrieval granularity, and how does GraphRAG aggregate information for a corpus-wide question?
+Q3. Compare the provenance and update mechanisms described by Lewis et al. with the source-inspection and missing-answer principles in Document C.
+Q4. Which GraphRAG indexing stages supply global context that a nearest-passage RAG model can miss, and how does that relate to the archive-grounding aim in Document C?
+Q5. What evidence in the uploaded sources supports source-grounded two-host audio as a teaching activity, and do the sources establish that all citations or every generated audio claim are guaranteed correct?

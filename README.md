@@ -13,3 +13,5 @@ Each mission has its own folder.
 - [Mission Three](Mission%20Three/): multi-head attention, RoPE, GQA KV-cache benchmark and memory safety audit.
 
 - [Mission Four](Mission%20Four/): DPO, human preference calibration, SimPO, length diagnostics and activation steering.
+
+- [Mission Five](Mission%20Five/): HNSW, BM25/RRF, NotebookLM grounding audit and retrieval safety.

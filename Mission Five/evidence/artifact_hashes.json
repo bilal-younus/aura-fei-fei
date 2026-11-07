@@ -1,0 +1,7 @@
+{
+  "data/chunks.json": "0ed60de688af16d234cbfd813d12344b93692c0b7e8c0064e3e22603c4dcc51d",
+  "data/embedding_texts.json": "76b264b4579e506942b234466c64f351911fa5f06121c0df59cbcf8eff629007",
+  "data/embeddings.npz": "7b323d35574914211328f283672a1f450a05104b10794b7d3a0231badca39a8a",
+  "evidence/audio_excerpt_0000_0200.wav": "ccbc6789699886bc1ac36573c403d2181121225081da5cd4ebb0b5af0d6711ca",
+  "evidence/audio_excerpt_transcript.txt": "4da73266572d771d355ecd33c1a62f3784fc8b18afac398b4e1bed512e85c2af"
+}

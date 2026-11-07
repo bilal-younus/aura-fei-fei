@@ -1,0 +1,5 @@
+concept_memory {'dense': ['semantic_memory', 'rag_memory', 'source_audio'], 'sparse': ['semantic_memory', 'rag_update', 'source_refusal'], 'fused': ['semantic_memory', 'rag_update', 'source_refusal']}
+concept_global {'dense': ['graph_global', 'graph_reduce', 'rag_update'], 'sparse': ['graph_global', 'rrf_rank', 'rag_update'], 'fused': ['graph_global', 'rag_update', 'rrf_rank']}
+exact_serial {'dense': ['ship_cooling_near', 'ship_cooling', 'lexical_manual'], 'sparse': ['ship_cooling'], 'fused': ['ship_cooling', 'ship_cooling_near', 'lexical_manual']}
+exact_sensor {'dense': ['ship_spares', 'lexical_manual', 'source_refusal'], 'sparse': ['ship_sensor'], 'fused': ['ship_sensor', 'ship_spares', 'lexical_manual']}
+mixed {'dense': ['ship_power', 'ship_sensor', 'ship_spares'], 'sparse': ['ship_power', 'ship_sensor', 'ship_cooling'], 'fused': ['ship_power', 'ship_sensor', 'ship_cooling']}

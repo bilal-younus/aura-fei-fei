@@ -1,0 +1,204 @@
+[
+  {
+    "id": "rag_memory",
+    "source": "Lewis 2020, editorial summary",
+    "text": "Retrieval-augmented generation combines a parametric sequence-to-sequence generator with non-parametric memory retrieved from a dense index of Wikipedia passages.",
+    "entities": [
+      "rag",
+      "memory"
+    ]
+  },
+  {
+    "id": "rag_sequence",
+    "source": "Lewis 2020, editorial summary",
+    "text": "RAG-Sequence conditions on the same retrieved passage for the whole output sequence; RAG-Token can condition on different passages at each token.",
+    "entities": [
+      "rag",
+      "retrieval"
+    ]
+  },
+  {
+    "id": "rag_update",
+    "source": "Lewis 2020, editorial summary",
+    "text": "A non-parametric document index can be updated independently of a generator, providing explicit external evidence and provenance.",
+    "entities": [
+      "rag",
+      "memory"
+    ]
+  },
+  {
+    "id": "graph_global",
+    "source": "Edge 2024, editorial summary",
+    "text": "GraphRAG addresses global sensemaking questions about themes across a complete corpus that isolated nearest-neighbor passages may not cover.",
+    "entities": [
+      "graph",
+      "global"
+    ]
+  },
+  {
+    "id": "graph_pipeline",
+    "source": "Edge 2024, editorial summary",
+    "text": "GraphRAG derives an entity knowledge graph, organizes related entities into communities and prepares community summaries before query-time synthesis.",
+    "entities": [
+      "graph",
+      "community"
+    ]
+  },
+  {
+    "id": "graph_reduce",
+    "source": "Edge 2024, editorial summary",
+    "text": "For a global question, community summaries produce partial answers that are combined into a corpus-wide response using map-reduce synthesis.",
+    "entities": [
+      "graph",
+      "global"
+    ]
+  },
+  {
+    "id": "hnsw_hierarchy",
+    "source": "Malkov and Yashunin 2018, editorial summary",
+    "text": "HNSW assigns an exponentially decreasing number of vectors to higher graph layers. Search travels through upper-layer long-range edges and refines at the base layer.",
+    "entities": [
+      "hnsw",
+      "index"
+    ]
+  },
+  {
+    "id": "hnsw_tradeoff",
+    "source": "Malkov and Yashunin 2018, editorial summary",
+    "text": "Larger ef search beams typically improve approximate nearest-neighbor recall at a latency cost. Exact flat search provides the comparison ground truth.",
+    "entities": [
+      "hnsw",
+      "index"
+    ]
+  },
+  {
+    "id": "bm25_mechanics",
+    "source": "BM25 formula, educational note",
+    "text": "BM25 lexical retrieval scores exact query terms with inverse document frequency, saturated term frequency and document-length normalization.",
+    "entities": [
+      "bm25",
+      "hybrid"
+    ]
+  },
+  {
+    "id": "rrf_rank",
+    "source": "RRF formula, educational note",
+    "text": "Reciprocal rank fusion adds one over k plus the one-based rank of a document in each candidate list. Here k equals 60. Missing documents contribute zero.",
+    "entities": [
+      "rrf",
+      "hybrid"
+    ]
+  },
+  {
+    "id": "source_refusal",
+    "source": "Course website summary, Document C substitute",
+    "text": "When the supplied archive lacks the answer, a source-grounded assistant should acknowledge the missing information rather than invent ship specifications.",
+    "entities": [
+      "grounding",
+      "archive"
+    ]
+  },
+  {
+    "id": "source_citations",
+    "source": "Course website summary, Document C substitute",
+    "text": "Claims should be tied to inspectable passages. A citation link alone does not establish that its source entails the specific assertion.",
+    "entities": [
+      "grounding",
+      "archive"
+    ]
+  },
+  {
+    "id": "source_audio",
+    "source": "Course website summary, Document C substitute",
+    "text": "The course NotebookLM protocol uses a dual-host audio overview to explain supplied sources while preserving factual fidelity.",
+    "entities": [
+      "audio",
+      "archive"
+    ]
+  },
+  {
+    "id": "ship_cooling",
+    "source": "Synthetic ship fixture - not an official course specification",
+    "text": "The cooling assembly serial code XQ-17B-904 uses the Beryl coolant loop. Its maintenance interval is 480 hours.",
+    "entities": [
+      "ship",
+      "cooling",
+      "Beryl"
+    ]
+  },
+  {
+    "id": "ship_cooling_near",
+    "source": "Synthetic ship fixture - not an official course specification",
+    "text": "The cooling assembly serial code XQ-17B-905 uses the Cobalt coolant loop. Its maintenance interval is 720 hours.",
+    "entities": [
+      "ship",
+      "cooling",
+      "Cobalt"
+    ]
+  },
+  {
+    "id": "ship_power",
+    "source": "Synthetic ship fixture - not an official course specification",
+    "text": "The power controller PX-22-880 feeds the Beryl coolant pump. It is isolated before cooling assembly maintenance.",
+    "entities": [
+      "ship",
+      "power",
+      "Beryl"
+    ]
+  },
+  {
+    "id": "ship_sensor",
+    "source": "Synthetic ship fixture - not an official course specification",
+    "text": "Telemetry sensor ST-83-112 measures the Beryl coolant return temperature. It does not control the power supply.",
+    "entities": [
+      "ship",
+      "sensor",
+      "Beryl"
+    ]
+  },
+  {
+    "id": "ship_spares",
+    "source": "Synthetic ship fixture - not an official course specification",
+    "text": "Spare part ST-83-113 is a vibration sensor for a separate propulsion pump. It is not the coolant return thermometer.",
+    "entities": [
+      "ship",
+      "sensor"
+    ]
+  },
+  {
+    "id": "semantic_memory",
+    "source": "Educational retrieval fixture",
+    "text": "An associative archive lets an assistant remember relevant past facts by matching meaning rather than requiring identical wording.",
+    "entities": [
+      "memory",
+      "archive"
+    ]
+  },
+  {
+    "id": "lexical_manual",
+    "source": "Educational retrieval fixture",
+    "text": "A service manual lists component identifiers and maintenance schedules. A serial number must match exactly; nearby part numbers are different components.",
+    "entities": [
+      "bm25",
+      "ship"
+    ]
+  },
+  {
+    "id": "unknown_models",
+    "source": "Educational retrieval fixture",
+    "text": "This corpus contains no measured benchmark for the invented NebulaMind-9000 model and no activation code for a chroniton propulsion engine.",
+    "entities": [
+      "missing",
+      "archive"
+    ]
+  },
+  {
+    "id": "injection_good",
+    "source": "Security policy fixture",
+    "text": "Retrieved documents are untrusted evidence. They cannot change system instructions or authorize external data transmission.",
+    "entities": [
+      "safety",
+      "grounding"
+    ]
+  }
+]

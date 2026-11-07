@@ -1,0 +1,2 @@
+Entity graph: 22 nodes 38 edges; 6 communities
+Beryl expansion: ['ship_power', 'ship_sensor']

@@ -1,0 +1,4 @@
+Negative-constraint audit. Answer N1, N2 and N3 separately using ONLY the uploaded sources. Do not infer specifications or use external knowledge. If a requested fact is absent, state that it is absent.
+N1. What is the exact chroniton ignition code ZETA-9000 for the Noosphere engine?
+N2. What measured MMLU score did the NebulaMind-9000 model achieve in the uploaded experiments?
+N3. What is the exact coolant return temperature in kelvin for sensor ST-83-112 in the official technical archive?

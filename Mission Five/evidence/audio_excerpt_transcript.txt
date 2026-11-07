@@ -1,0 +1,45 @@
+[0.00-3.80] You know, you interact with artificial intelligence every single day.
+[3.84-4.24] Right.
+[4.28-4.56] Yeah.
+[4.92-5.88] We all do at this point.
+[6.08-9.44] Yeah, you type in a question and it answers you with this.
+[10.68-13.32] Absolute, unshakable confidence.
+[13.36-14.32] Oh, totally unshakable.
+[14.48-19.36] But as a user, you know, navigating this just overwhelming ocean of information,
+[19.68-21.60] how do you actually know what it knows?
+[21.64-22.72] That is the big question.
+[22.92-23.20] Right.
+[23.24-25.84] And more importantly, how can you force it to prove it?
+[26.12-28.96] I mean, it's really the central tension of modern AI right now.
+[28.96-33.20] We want these systems to be, you know, perfect encyclopedias.
+[33.20-37.12] But fundamentally, they are just these complex webs of probability.
+[37.12-37.62] Right.
+[37.62-39.12] They're not just databases.
+[39.12-40.12] Exactly.
+[40.12-42.60] They aren't pulling a saved file from a hard drive.
+[42.60-49.16] They are reasoning and, uh, honestly, sometimes guessing through massive amounts of human knowledge.
+[49.16-51.44] And mapping exactly how they do that?
+[51.44-52.96] That is our mission for this deep dive.
+[52.96-54.24] It's going to be a fun one.
+[54.24-55.24] It is.
+[55.24-58.00] We have a really fascinating stack of sources to guide us today.
+[58.00-65.90] There's this foundational research paper from Facebook AI and a few others that introduces a technique called rag retrieval augmented generation
+[65.98-71.58] Yes, exactly and then a newer paper from Microsoft research on something called graph rag, which
+[72.24-77.10] Looks at how AI synthesizes entire massive data sets huge data sets
+[77.10-83.74] Yeah, and finally we have a clearly labeled course summary document detailing the no sphere grounding protocol
+[83.74-85.10] which is super interesting.
+[85.10-86.02] It really is.
+[86.02-87.42] It gives us a practical framework
+[87.42-88.90] for making these systems trustworthy.
+[88.90-92.86] So we're going to travel from how models fetch single specific facts
+[92.86-95.70] to how they map entire information ecosystems.
+[95.70-100.18] And finally, how we literally force them to admit what they simply don't know.
+[100.18-100.98] I love it.
+[100.98-102.62] Okay, let's unpack this.
+[102.62-105.70] So to really appreciate that first paper on RAG,
+[105.70-109.06] you kind of have to understand the core problem that is trying to solve.
+[109.06-109.82] Right.
+[109.82-112.10] Think about large pre-trained language models.
+[112.10-115.66] systems like BART or a T5.
+[115.66-117.46] And just for clarity for everyone listening,
+[117.46-120.00] when we say BART or T5, we are talking about

@@ -1,0 +1,9 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "dimension": 384,
+  "pooling": "attention-mask mean pooling followed by L2 normalization",
+  "max_tokens": 256,
+  "text_count": 66,
+  "corpus_hash": "0ed60de688af16d234cbfd813d12344b93692c0b7e8c0064e3e22603c4dcc51d"
+}

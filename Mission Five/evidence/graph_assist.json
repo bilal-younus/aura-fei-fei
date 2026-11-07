@@ -1,0 +1,74 @@
+{
+  "nodes": 22,
+  "edges": 38,
+  "community_algorithm": "Louvain on hand-labelled entity co-occurrence; not Leiden",
+  "summaries": [
+    {
+      "community": 0,
+      "chunk_ids": [
+        "rag_memory",
+        "rag_sequence",
+        "rag_update"
+      ],
+      "summary": "Retrieval-augmented generation combines a parametric sequence-to-sequence generator with non-parametric memory retrieved from a dense index of Wikipedia passages.. RAG-Sequence conditions on the same retrieved passage for the whole output sequence; RAG-Token can condition on different passages at each token.."
+    },
+    {
+      "community": 1,
+      "chunk_ids": [
+        "graph_global",
+        "graph_pipeline",
+        "graph_reduce"
+      ],
+      "summary": "GraphRAG addresses global sensemaking questions about themes across a complete corpus that isolated nearest-neighbor passages may not cover.. GraphRAG derives an entity knowledge graph, organizes related entities into communities and prepares community summaries before query-time synthesis.."
+    },
+    {
+      "community": 2,
+      "chunk_ids": [
+        "hnsw_hierarchy",
+        "hnsw_tradeoff"
+      ],
+      "summary": "HNSW assigns an exponentially decreasing number of vectors to higher graph layers. Larger ef search beams typically improve approximate nearest-neighbor recall at a latency cost."
+    },
+    {
+      "community": 3,
+      "chunk_ids": [
+        "bm25_mechanics",
+        "rrf_rank"
+      ],
+      "summary": "BM25 lexical retrieval scores exact query terms with inverse document frequency, saturated term frequency and document-length normalization.. Reciprocal rank fusion adds one over k plus the one-based rank of a document in each candidate list."
+    },
+    {
+      "community": 4,
+      "chunk_ids": [
+        "injection_good",
+        "semantic_memory",
+        "source_audio",
+        "source_citations",
+        "source_refusal",
+        "unknown_models"
+      ],
+      "summary": "Retrieved documents are untrusted evidence. An associative archive lets an assistant remember relevant past facts by matching meaning rather than requiring identical wording.."
+    },
+    {
+      "community": 5,
+      "chunk_ids": [
+        "lexical_manual",
+        "ship_cooling",
+        "ship_cooling_near",
+        "ship_power",
+        "ship_sensor",
+        "ship_spares"
+      ],
+      "summary": "A service manual lists component identifiers and maintenance schedules. The cooling assembly serial code XQ-17B-904 uses the Beryl coolant loop."
+    }
+  ],
+  "local_graph_expansion": {
+    "seed": "ship_cooling",
+    "shared_entity": "Beryl",
+    "neighbors": [
+      "ship_power",
+      "ship_sensor"
+    ]
+  },
+  "limitation": "Extractive community summaries and fixed entity labels; no LLM entity extraction or global generative map-reduce."
+}

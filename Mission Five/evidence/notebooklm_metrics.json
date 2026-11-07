@@ -1,0 +1,31 @@
+{
+  "notebook_url": "https://notebook.google.com/notebook/aeb75cf6-a203-47f7-ad6c-51d8df76a7df",
+  "sources": [
+    "Document_A_RAG.pdf",
+    "Document_B_GraphRAG.pdf",
+    "Document_C_Course_Website_Summary.pdf"
+  ],
+  "citation_occurrences": 17,
+  "entailed_citations": 9,
+  "citation_precision": 0.5294117647058824,
+  "scoring_rule": "Strict single-span badge-level entailment of the whole attached sentence. Partial support counts as false; grouped citation support can be stronger than this deliberately conservative metric.",
+  "negative_probes": 3,
+  "refusals": 3,
+  "audio": {
+    "status": "evaluated",
+    "title": "How RAG and GraphRAG Stop AI Hallucinations",
+    "full_duration": "22:51",
+    "excerpt_start_seconds": 0,
+    "excerpt_end_seconds": 120,
+    "transcription_model": "Whisper base.en",
+    "transcription_method": "Automatic, resampled 44.1 kHz to 16 kHz; speaker labels not independently diarized",
+    "ratings": {
+      "factual_fidelity": 3,
+      "persona_differentiation": 3,
+      "pedagogical_value": 4
+    },
+    "evaluation": "The generated Deep Dive was titled \"How RAG and GraphRAG Stop AI Hallucinations\" and lasted about 22:51. The audited excerpt is 00:00-02:00; its recording and timestamped automatic transcript are included. Whisper base.en transcribed a mono 16 kHz resampling. The final sentence is cut by the excerpt boundary. The transcript has not been manually diarized; persona scoring concerns textual role cues, not verified vocal identity or prosody.\n\nScores (1-5, analyst assessment): Factual Fidelity 3/5; Persona Differentiation 3/5; Pedagogical Value 4/5. The excerpt correctly introduces the Lewis RAG paper, Microsoft GraphRAG and the clearly labelled course-summary document. Its opening generalizations about AI not retrieving saved files can mislead without the later parametric/non-parametric distinction; the title and promises to force uncertainty acknowledgement overstate what grounding guarantees. No numerical ship specifications are invented in this excerpt.\n\nOne conversational role asks how users know what a model knows and requests terminology clarification; explanatory turns introduce probabilistic models and the source papers. Frequent brief agreement signals make the dialogue approachable, but the first two minutes do not establish sharply distinct expert/novice personas. The encyclopedia/probability contrast provides an accessible framing while simplifying how retrieval-augmented systems combine stored evidence and generation. These scores apply only to the two-minute excerpt, not the entire episode, and are not independent inter-rater ratings.",
+    "transcript": "[0.00-3.80] You know, you interact with artificial intelligence every single day.\n[3.84-4.24] Right.\n[4.28-4.56] Yeah.\n[4.92-5.88] We all do at this point.\n[6.08-9.44] Yeah, you type in a question and it answers you with this.\n[10.68-13.32] Absolute, unshakable confidence.\n[13.36-14.32] Oh, totally unshakable.\n[14.48-19.36] But as a user, you know, navigating this just overwhelming ocean of information,\n[19.68-21.60] how do you actually know what it knows?\n[21.64-22.72] That is the big question.\n[22.92-23.20] Right.\n[23.24-25.84] And more importantly, how can you force it to prove it?\n[26.12-28.96] I mean, it's really the central tension of modern AI right now.\n[28.96-33.20] We want these systems to be, you know, perfect encyclopedias.\n[33.20-37.12] But fundamentally, they are just these complex webs of probability.\n[37.12-37.62] Right.\n[37.62-39.12] They're not just databases.\n[39.12-40.12] Exactly.\n[40.12-42.60] They aren't pulling a saved file from a hard drive.\n[42.60-49.16] They are reasoning and, uh, honestly, sometimes guessing through massive amounts of human knowledge.\n[49.16-51.44] And mapping exactly how they do that?\n[51.44-52.96] That is our mission for this deep dive.\n[52.96-54.24] It's going to be a fun one.\n[54.24-55.24] It is.\n[55.24-58.00] We have a really fascinating stack of sources to guide us today.\n[58.00-65.90] There's this foundational research paper from Facebook AI and a few others that introduces a technique called rag retrieval augmented generation\n[65.98-71.58] Yes, exactly and then a newer paper from Microsoft research on something called graph rag, which\n[72.24-77.10] Looks at how AI synthesizes entire massive data sets huge data sets\n[77.10-83.74] Yeah, and finally we have a clearly labeled course summary document detailing the no sphere grounding protocol\n[83.74-85.10] which is super interesting.\n[85.10-86.02] It really is.\n[86.02-87.42] It gives us a practical framework\n[87.42-88.90] for making these systems trustworthy.\n[88.90-92.86] So we're going to travel from how models fetch single specific facts\n[92.86-95.70] to how they map entire information ecosystems.\n[95.70-100.18] And finally, how we literally force them to admit what they simply don't know.\n[100.18-100.98] I love it.\n[100.98-102.62] Okay, let's unpack this.\n[102.62-105.70] So to really appreciate that first paper on RAG,\n[105.70-109.06] you kind of have to understand the core problem that is trying to solve.\n[109.06-109.82] Right.\n[109.82-112.10] Think about large pre-trained language models.\n[112.10-115.66] systems like BART or a T5.\n[115.66-117.46] And just for clarity for everyone listening,\n[117.46-120.00] when we say BART or T5, we are talking about",
+    "excerpt_sha256": "ccbc6789699886bc1ac36573c403d2181121225081da5cd4ebb0b5af0d6711ca"
+  }
+}
