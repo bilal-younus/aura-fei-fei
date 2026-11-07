@@ -35,5 +35,3 @@ The included checkpoints reproduce the recorded evaluation. For a fresh determin
 - The 50% saving is exact model-parameter storage (two copies versus one), not an invented total-VRAM measurement. The script profiles peak CUDA allocation when CUDA exists; this host has no CUDA GPU.
 - Steering results are closed-candidate likelihood selections on eight synthetic prompts per task, not free-form safety certification. Calibration and held-out steering prompts are separate. Weights remain unchanged and hooks are removed after every coefficient.
 
-## Submission
-Upload `mission-04-doc.pdf`, and provide the public repository URL through the course portal and Moodle as requested. The notebook is also available. Four team members review their assigned sections and authorize their own roles in the portal. Local execution evidence does not certify IDE use or personal sign-offs.
