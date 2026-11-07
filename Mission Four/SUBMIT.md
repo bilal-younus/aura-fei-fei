@@ -1,6 +1,6 @@
 # Mission 04 submission
 
-1. Check the public folder: https://github.com/bilal-younus/aura-fei-fei/tree/main/docs/weeks/week-04/problem_set
+1. Check the public folder: https://github.com/bilal-younus/aura-fei-fei/tree/main/Mission%20Four
 2. Upload `mission-04-doc.pdf` to Mission 04 on Moodle and the AURA console where requested. The companion Markdown and executed `ps04_solution.ipynb` are in the repository.
 3. Enter https://github.com/bilal-younus/aura-fei-fei as the solution repository URL.
 4. Bilal authorizes Architect, Danish Protocol, Anas Data/Memory, and Shahzaib Security/Alignment after reviewing their assigned sections.

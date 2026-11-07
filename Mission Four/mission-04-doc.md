@@ -7,7 +7,7 @@ Squadron Fei-Fei (Group 13) | 7 November 2026
 
 **Repository:** [bilal-younus/aura-fei-fei](https://github.com/bilal-younus/aura-fei-fei)
 
-**Implementation:** [docs/weeks/week-04/problem_set](https://github.com/bilal-younus/aura-fei-fei/tree/main/docs/weeks/week-04/problem_set)
+**Implementation:** [Mission Four](https://github.com/bilal-younus/aura-fei-fei/tree/main/Mission%20Four)
 
 ## Team roles
 
@@ -140,7 +140,7 @@ Only trusted code should register hooks or supply vectors. Persisted vectors nee
 
 ## Reproduction
 
-From docs/weeks/week-04/problem_set, create a Python environment, install requirements.txt and run:
+From Mission Four, create a Python environment, install requirements.txt and run:
 
 ```bash
 python run_all.py

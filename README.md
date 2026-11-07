@@ -12,4 +12,4 @@ Each mission has its own folder.
 
 - [Mission Three](Mission%20Three/): multi-head attention, RoPE, GQA KV-cache benchmark and memory safety audit.
 
-- [Mission Four](docs/weeks/week-04/problem_set/): DPO, human preference calibration, SimPO, length diagnostics and activation steering.
+- [Mission Four](Mission%20Four/): DPO, human preference calibration, SimPO, length diagnostics and activation steering.
