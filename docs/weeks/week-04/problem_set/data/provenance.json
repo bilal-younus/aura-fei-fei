@@ -1,0 +1,7 @@
+{
+  "source": "https://media.githubusercontent.com/media/anthropics/hh-rlhf/master/helpful-base/test.jsonl.gz",
+  "repository": "https://github.com/anthropics/hh-rlhf",
+  "selection": "First 64 valid same-prompt pairs in helpful-base test split; no training on this file",
+  "count": 64,
+  "sha256": "2f028448eea1228d4bf655a9313ba0ba67d6778d5cfc12519ae26dd4c07ea1e9"
+}

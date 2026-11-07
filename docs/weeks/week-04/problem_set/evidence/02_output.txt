@@ -1,0 +1,6 @@
+{
+  "dataset": "Anthropic HH-RLHF helpful-base test",
+  "n": 64,
+  "pairwise_accuracy": 0.375
+}
+Brier: 0.5288570213934978 ECE: 0.49514728982840595

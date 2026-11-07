@@ -1,0 +1,11 @@
+Length correlation DPO: -0.6478598031997136 SimPO: 0.05515510618760848
+{
+  "parameter_bytes_per_model": 325248,
+  "static_dpo_model_bytes": 650496,
+  "static_simpo_model_bytes": 325248,
+  "static_model_storage_reduction_percent": 50.0,
+  "note": "Exact parameter-storage accounting; optimizer states, activations and allocator overhead are excluded. Not total VRAM.",
+  "cuda_available": false,
+  "cuda_peak_allocated_MB": null,
+  "cuda_status": "Not measured: no CUDA device on this host"
+}

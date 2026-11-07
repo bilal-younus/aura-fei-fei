@@ -1,0 +1,9 @@
+{
+  "initial_loss": 0.6931470632553101,
+  "expected_equal_policy_loss": 0.6931471805599453,
+  "policy_gradient_l2": 2.168006362704884,
+  "policy_changed": true,
+  "reference_unchanged": true,
+  "reference_gradients_absent": true,
+  "reference_hash": "6615fc8a0846f00c8f44c27b8160a10ef064ffffe3dbd91887341f3745590478"
+}

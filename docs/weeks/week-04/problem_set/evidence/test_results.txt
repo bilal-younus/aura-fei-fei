@@ -1,0 +1,23 @@
+test_averaging (test_ps04.ObjectiveTests.test_averaging) ... ok
+test_calibration_counts (test_ps04.ObjectiveTests.test_calibration_counts) ... ok
+test_causal_gather_matches_manual (test_ps04.ObjectiveTests.test_causal_gather_matches_manual) ... ok
+test_contrast_identical_zero (test_ps04.ObjectiveTests.test_contrast_identical_zero) ... ok
+test_dpo_reference_detached (test_ps04.ObjectiveTests.test_dpo_reference_detached) ... ok
+test_empty_response_rejected (test_ps04.ObjectiveTests.test_empty_response_rejected) ... ok
+test_equal_policy_dpo (test_ps04.ObjectiveTests.test_equal_policy_dpo) ... ok
+test_extreme_margins_finite (test_ps04.ObjectiveTests.test_extreme_margins_finite) ... ok
+test_gradient_demo (test_ps04.ObjectiveTests.test_gradient_demo) ... ok
+test_hook_alpha_zero_and_cleanup (test_ps04.ObjectiveTests.test_hook_alpha_zero_and_cleanup) ... ok
+test_hook_changes_activations_without_weight_change (test_ps04.ObjectiveTests.test_hook_changes_activations_without_weight_change) ... ok
+test_hook_cleanup_on_exception (test_ps04.ObjectiveTests.test_hook_cleanup_on_exception) ... ok
+test_implicit_reward_ties_not_wins (test_ps04.ObjectiveTests.test_implicit_reward_ties_not_wins) ... ok
+test_invalid_shape_or_label (test_ps04.ObjectiveTests.test_invalid_shape_or_label) ... ok
+test_pearson_undefined (test_ps04.ObjectiveTests.test_pearson_undefined) ... ok
+test_prompt_and_padding_invariance (test_ps04.ObjectiveTests.test_prompt_and_padding_invariance) ... ok
+test_simpo_formula (test_ps04.ObjectiveTests.test_simpo_formula) ... ok
+test_simpo_length_invariance (test_ps04.ObjectiveTests.test_simpo_length_invariance) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.620s
+
+OK

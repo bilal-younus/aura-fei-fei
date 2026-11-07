@@ -2,7 +2,7 @@
 
 Conversational AI: History, Applications, Future — BTU WS 2026/27.
 
-Squadron Fei-Fei (Group 13): Bilal Younus, Danish Hafeez and Anas Arshad.
+Squadron Fei-Fei (Group 13): Bilal Younus, Danish Hafeez, Anas Arshad and Shahzaib Ahmed.
 
 Each mission has its own folder.
 
@@ -11,3 +11,5 @@ Each mission has its own folder.
 - [Mission Two](Mission%20Two/): FST dialogue manager, Lovelace inquiry and noisy-channel simulator.
 
 - [Mission Three](Mission%20Three/): multi-head attention, RoPE, GQA KV-cache benchmark and memory safety audit.
+
+- [Mission Four](docs/weeks/week-04/problem_set/): DPO, human preference calibration, SimPO, length diagnostics and activation steering.
