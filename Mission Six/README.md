@@ -28,7 +28,7 @@ python 05_System2_Warp_Pilot.py
 `ps06_solution.ipynb` integrates all parts with executed outputs and ends with the four `assert` test suites from the brief. `python build_notebook.py` re-executes it. `mission-06-doc.md` is the report source; `python build_doc.py` converts it to `mission-06-doc.pdf`. `evidence/` contains script outputs, episode traces, the security log, pilot results, the plot, test output and `environment-lock.txt`.
 
 ## Files and the brief
-The four parts follow `ps06_briefing.md` and the course portal: state machine, tool dispatcher, MDP logger with discounted return, and Floyd cycle detection. The instructor's starter files order Parts 3 and 4 differently. Their ideas are still covered:
+The four parts follow the course handout `ps06.pdf` (identical to `ps06_briefing.md` in the instructor repository) and the course portal: state machine, tool dispatcher, MDP logger with discounted return, and Floyd cycle detection. The instructor's starter files order Parts 3 and 4 differently. Their ideas are still covered:
 - The starter's SHA-256 loop sentinel is part of `04_Infinite_Loop_Sentinel.py`.
 - The starter's System 2 warp pilot is the integration script `05_System2_Warp_Pilot.py`.
 

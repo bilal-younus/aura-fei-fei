@@ -207,4 +207,4 @@ Package versions are in `evidence/environment-lock.txt`. The handout path `weeks
 - Wang et al. (2023), [A Survey on LLM-based Autonomous Agents](https://arxiv.org/abs/2308.11432).
 - Knuth, The Art of Computer Programming Vol. 2, Section 3.1, Exercise 6 (cycle detection, attributed to R. W. Floyd).
 - [JSON Schema specification](https://json-schema.org/specification).
-- Course brief `mission-06/ps06_briefing.md`, [Unisvet/couse-c-ai](https://github.com/Unisvet/couse-c-ai).
+- Course handout ps06.pdf (also `mission-06/ps06_briefing.md` in [Unisvet/couse-c-ai](https://github.com/Unisvet/couse-c-ai)).
