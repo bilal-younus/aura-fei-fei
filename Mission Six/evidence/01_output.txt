@@ -1,0 +1,27 @@
+=== Part 1: Deterministic cycle with a 20-step budget (never completes) ===
+call 01:         IDLE -> PERCEIVING
+call 02:   PERCEIVING -> DELIBERATING
+call 03: DELIBERATING -> ACTING
+call 04:       ACTING -> OBSERVING
+call 05:    OBSERVING -> REFLECTING
+call 06:   REFLECTING -> DELIBERATING
+call 07: DELIBERATING -> ACTING
+call 08:       ACTING -> OBSERVING
+call 09:    OBSERVING -> REFLECTING
+call 10:   REFLECTING -> DELIBERATING
+call 11: DELIBERATING -> ACTING
+call 12:       ACTING -> OBSERVING
+call 13:    OBSERVING -> REFLECTING
+call 14:   REFLECTING -> DELIBERATING
+call 15: DELIBERATING -> ACTING
+call 16:       ACTING -> OBSERVING
+call 17:    OBSERVING -> REFLECTING
+call 18:   REFLECTING -> DELIBERATING
+call 19: DELIBERATING -> ACTING
+call 20:       ACTING -> OBSERVING
+call 21:    OBSERVING -> HALTED
+step_count=20, state=HALTED, reason='step budget of 20 exhausted'
+
+=== Part 1: Mission completes on the first reflection ===
+IDLE -> PERCEIVING -> DELIBERATING -> ACTING -> OBSERVING -> REFLECTING -> HALTED | steps=6
+[PASS] State machine verified.

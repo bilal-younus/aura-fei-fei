@@ -1,0 +1,24 @@
+=== Part 2: Dispatcher contract and error boundary ===
+> {"tool": "query_sensor_array", "arguments": {"target": "escape_corridor"}}
+  Observation: Clear gravitational corridor detected along vector [-0.85, 0.52, 0.05].
+> {"tool": "adjust_plasma_shields", "arguments": {"intensity": 85}}
+  Observation: Plasma shield harmonics adjusted to 85% capacity.
+> {"tool": "adjust_plasma_shields", "arguments": {"intensity": -20}}
+  Tool Execution Error: ValueError: shield intensity -20% is out of bounds; valid range is [0, 100]
+> {"tool": "adjust_plasma_shields", "arguments": {"intensity": true}}
+  Tool Execution Error: adjust_plasma_shields contract violation: arguments.intensity must be of type integer, got bool
+> {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52}}
+  Tool Execution Error: navigate_warp_vector contract violation: missing required argument 'z'
+> {"tool": "navigate_warp_vector", "arguments": {"x": 3, "y": 0, "z": 0}}
+  Tool Execution Error: navigate_warp_vector contract violation: arguments.x must be <= 1.0
+> {"tool": "navigate_warp_vector", "arguments": {"x": 0, "y": 1, "z": 0}}
+  Tool Execution Error: ValueError: vector [0.00, 1.00, 0.00] matches no charted heading ['DIRECT', 'CORRIDOR']
+> {"tool": "self_destruct", "arguments": {}}
+  Tool Execution Error: unknown tool 'self_destruct'; available: ['adjust_plasma_shields', 'navigate_warp_vector', 'query_sensor_array']
+> {"tool": "adjust_plasma_shields", "arguments": {"intensity": 70}
+  Tool Execution Error: invalid JSON payload (Expecting ',' delimiter at character 64)
+> {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52, "z": 0.05}}
+  Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in CORRIDOR; plasma reserve 95%.
+
+10 calls, 7 returned error observations, 0 exceptions escaped the boundary.
+[PASS] Tool protocol verified.

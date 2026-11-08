@@ -1,0 +1,24 @@
+test_error_observation_drives_self_correction (test_ps06.IntegrationTests.test_error_observation_drives_self_correction) ... ok
+test_system1_trapped_system2_escapes_dust_lane (test_ps06.IntegrationTests.test_system1_trapped_system2_escapes_dust_lane) ... ok
+test_system2_raises_shields_in_core (test_ps06.IntegrationTests.test_system2_raises_shields_in_core) ... ok
+test_brief_idle_to_halted_and_21_steps (test_ps06.Part1StateMachineTests.test_brief_idle_to_halted_and_21_steps) ... ok
+test_exact_states_and_legal_edges_only (test_ps06.Part1StateMachineTests.test_exact_states_and_legal_edges_only) ... ok
+test_halted_is_absorbing_and_budget_validated (test_ps06.Part1StateMachineTests.test_halted_is_absorbing_and_budget_validated) ... ok
+test_brief_invalid_json_returns_error_observation (test_ps06.Part2ProtocolTests.test_brief_invalid_json_returns_error_observation) ... ok
+test_schema_types_and_bounds (test_ps06.Part2ProtocolTests.test_schema_types_and_bounds) ... ok
+test_tool_value_error_is_caught (test_ps06.Part2ProtocolTests.test_tool_value_error_is_caught) ... ok
+test_valid_calls_change_ship_state (test_ps06.Part2ProtocolTests.test_valid_calls_change_ship_state) ... ok
+test_brief_discounted_return (test_ps06.Part3MDPTests.test_brief_discounted_return) ... ok
+test_logger_tau_and_returns_to_go (test_ps06.Part3MDPTests.test_logger_tau_and_returns_to_go) ... ok
+test_manual_frequency (test_ps06.Part3MDPTests.test_manual_frequency) ... ok
+test_transition_frequency_normalized_and_close_to_truth (test_ps06.Part3MDPTests.test_transition_frequency_normalized_and_close_to_truth) ... ok
+test_brief_cycle_halts_before_step_10 (test_ps06.Part4SentinelTests.test_brief_cycle_halts_before_step_10) ... ok
+test_floyd_mu_lambda (test_ps06.Part4SentinelTests.test_floyd_mu_lambda) ... ok
+test_hash_is_order_independent_and_state_sensitive (test_ps06.Part4SentinelTests.test_hash_is_order_independent_and_state_sensitive) ... ok
+test_progress_does_not_trip (test_ps06.Part4SentinelTests.test_progress_does_not_trip) ... ok
+test_third_identical_failure_trips (test_ps06.Part4SentinelTests.test_third_identical_failure_trips) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.013s
+
+OK

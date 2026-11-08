@@ -1,0 +1,57 @@
+=== Ship Anomaly 06: AURA trapped in the dust lane (start DUST_LANE, shields 30%) ===
+
+--- Dust lane: System 1 (reflex) ---
+  step  4 | DUST_LANE shields  30% | reflex: shortest heading to open space
+          {"tool": "navigate_warp_vector", "arguments": {"x": 1.0, "y": 0.0, "z": 0.0}}
+          -> Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted  [r=-5.0]
+  step  8 | DUST_LANE shields  30% | reflex: shortest heading to open space
+          {"tool": "navigate_warp_vector", "arguments": {"x": 1.0, "y": 0.0, "z": 0.0}}
+          -> Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted  [r=-5.0]
+  step 10 | TRIPWIRE: Floyd cycle detected: mu=0, lambda=1, tortoise=1, hare=2
+  outcome=tripwire | final=DUST_LANE | agent steps=10 | G0=-9.75 | halt='EMERGENCY TRIPWIRE: Floyd cycle detected: mu=0, lambda=1, tortoise=1, hare=2'
+
+--- Dust lane: System 2 (deliberative) ---
+  step  4 | DUST_LANE shields  30% | lookahead: Q(DIRECT)=82.57, Q(CORRIDOR)=92.18; override reflex DIRECT -> CORRIDOR
+          {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52, "z": 0.05}}
+          -> Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in CORRIDOR; plasma reserve 95%.  [r=-1.0]
+  step  8 | CORRIDOR  shields  30% | lookahead: Q(DIRECT)=98.58, Q(CORRIDOR)=98.77; override reflex DIRECT -> CORRIDOR
+          {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52, "z": 0.05}}
+          -> Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in OPEN_SPACE; plasma reserve 90%.  [r=+99.0]
+  outcome=escaped | final=OPEN_SPACE | agent steps=10 | G0=93.05 | halt='mission completed'
+
+=== Core radiation (start CORE, shields 30%) ===
+
+--- Core: System 1 (reflex) ---
+  step  4 | CORE      shields  30% | reflex: shortest heading to open space
+          {"tool": "navigate_warp_vector", "arguments": {"x": 1.0, "y": 0.0, "z": 0.0}}
+          -> Observation: Warp jump along [1.00, 0.00, 0.00] (DIRECT heading) arrived in HULL_BREACH; plasma reserve 95%.  [r=-101.0]
+  outcome=hull_breach | final=HULL_BREACH | agent steps=5 | G0=-101.00 | halt='hull breach'
+
+--- Core: System 2 (deliberative) ---
+  step  4 | CORE      shields  30% | constraint: core radiation and shields 30% < 60%; raise shields before any burn
+          {"tool": "adjust_plasma_shields", "arguments": {"intensity": 80}}
+          -> Observation: Plasma shield harmonics adjusted to 80% capacity.  [r=-0.5]
+  step  8 | CORE      shields  80% | lookahead: Q(DIRECT)=93.19, Q(CORRIDOR)=91.27; approve reflex
+          {"tool": "navigate_warp_vector", "arguments": {"x": 1.0, "y": 0.0, "z": 0.0}}
+          -> Observation: Warp jump along [1.00, 0.00, 0.00] (DIRECT heading) arrived in OPEN_SPACE; plasma reserve 95%.  [r=+99.0]
+  outcome=escaped | final=OPEN_SPACE | agent steps=10 | G0=93.55 | halt='mission completed'
+
+=== Self-correction from an injected error (stale map believes DUST_LANE -> DIRECT is best) ===
+
+--- Stale map: System 2 (stale map) ---
+  step  4 | DUST_LANE shields  30% | lookahead: Q(DIRECT)=99.00, Q(CORRIDOR)=92.18; approve reflex
+          {"tool": "navigate_warp_vector", "arguments": {"x": 1.0, "y": 0.0, "z": 0.0}}
+          -> Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted  [r=-5.0]
+  step  8 | DUST_LANE shields  30% | lookahead: Q(DIRECT)=99.00, Q(CORRIDOR)=92.18; skip DIRECT (already failed in this state); override reflex DIRECT -> CORRIDOR
+          {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52, "z": 0.05}}
+          -> Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in CORRIDOR; plasma reserve 95%.  [r=-1.0]
+  step 12 | CORRIDOR  shields  30% | lookahead: Q(DIRECT)=98.58, Q(CORRIDOR)=98.77; override reflex DIRECT -> CORRIDOR
+          {"tool": "navigate_warp_vector", "arguments": {"x": -0.85, "y": 0.52, "z": 0.05}}
+          -> Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in OPEN_SPACE; plasma reserve 90%.  [r=+99.0]
+  outcome=escaped | final=OPEN_SPACE | agent steps=14 | G0=83.40 | halt='mission completed'
+
+=== 1,000 seeded episodes per pilot from LOBE (identical seeds) ===
+Pilot                    | escaped | breach | tripwire | budget |  mean G0 | steps | errors
+System 1 (reflex)        |   35.9% |  44.0% |    19.2% |   0.9% |   -10.43 | 10.96 |   0.19
+System 2 (deliberative)  |   99.9% |   0.0% |     0.0% |   0.1% |    91.78 | 10.84 |   0.00
+Saved evidence/pilot_results.json, episode_traces.json, security_log.jsonl, pilot_comparison.png

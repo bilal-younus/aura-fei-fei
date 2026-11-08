@@ -1,0 +1,47 @@
+{
+  "q_values": {
+    "CORE|CORRIDOR": 91.27188149149785,
+    "CORE|DIRECT": 93.19148936165124,
+    "CORRIDOR|CORRIDOR": 98.76863253402463,
+    "CORRIDOR|DIRECT": 98.57741102104954,
+    "DUST_LANE|CORRIDOR": 92.17988274647428,
+    "DUST_LANE|DIRECT": 82.57088860915056,
+    "LOBE|CORRIDOR": 92.06893319538347,
+    "LOBE|DIRECT": 87.3737713277348
+  },
+  "results": [
+    {
+      "pilot": "System 1 (reflex)",
+      "episodes": 1000,
+      "start": "LOBE",
+      "outcomes": {
+        "escaped": 0.359,
+        "hull_breach": 0.44,
+        "tripwire": 0.192,
+        "budget": 0.009
+      },
+      "mean_G0": -10.427136662499999,
+      "stdev_G0": 82.9087546964287,
+      "mean_agent_steps": 10.958,
+      "mean_actions": 2.36,
+      "mean_tool_errors": 0.192
+    },
+    {
+      "pilot": "System 2 (deliberative)",
+      "episodes": 1000,
+      "start": "LOBE",
+      "outcomes": {
+        "escaped": 0.999,
+        "hull_breach": 0.0,
+        "tripwire": 0.0,
+        "budget": 0.001
+      },
+      "mean_G0": 91.78319186249999,
+      "stdev_G0": 3.986672282071941,
+      "mean_agent_steps": 10.84,
+      "mean_actions": 2.211,
+      "mean_tool_errors": 0
+    }
+  ],
+  "notes": "Synthetic seeded nebula model (nebula.py). Seeds 0-999 shared by both pilots; budget 20 transitions."
+}

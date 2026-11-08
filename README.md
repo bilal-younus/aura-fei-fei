@@ -15,3 +15,5 @@ Each mission has its own folder.
 - [Mission Four](Mission%20Four/): DPO, human preference calibration, SimPO, length diagnostics and activation steering.
 
 - [Mission Five](Mission%20Five/): HNSW, BM25/RRF, NotebookLM grounding audit and retrieval safety.
+
+- [Mission Six](Mission%20Six/): agent state machine, tool protocol, MDP returns and Floyd loop sentinel.

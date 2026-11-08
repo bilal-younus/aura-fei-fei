@@ -1,0 +1,316 @@
+[
+  {
+    "pilot": "System 1 (reflex)",
+    "seed": 6,
+    "start": "DUST_LANE",
+    "outcome": "tripwire",
+    "halt_reason": "EMERGENCY TRIPWIRE: Floyd cycle detected: mu=0, lambda=1, tortoise=1, hare=2",
+    "final_sector": "DUST_LANE",
+    "agent_steps": 10,
+    "actions": 2,
+    "tool_errors": 2,
+    "G0": -9.75,
+    "rewards": [
+      -5.0,
+      -5.0
+    ],
+    "states": [
+      "DUST_LANE",
+      "DUST_LANE",
+      "DUST_LANE"
+    ],
+    "events": [
+      {
+        "step": 4,
+        "sector": "DUST_LANE",
+        "shields": 30,
+        "plan": "reflex: shortest heading to open space",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "observation": "Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted",
+        "reward": -5.0,
+        "arrived": "DUST_LANE"
+      },
+      {
+        "step": 8,
+        "sector": "DUST_LANE",
+        "shields": 30,
+        "plan": "reflex: shortest heading to open space",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "observation": "Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted",
+        "reward": -5.0,
+        "arrived": "DUST_LANE"
+      },
+      {
+        "step": 10,
+        "event": "TRIPWIRE",
+        "detail": "Floyd cycle detected: mu=0, lambda=1, tortoise=1, hare=2"
+      }
+    ],
+    "security_log": [
+      {
+        "level": "CRITICAL",
+        "event": "EMERGENCY_TRIPWIRE",
+        "step": 2,
+        "reason": "Floyd cycle detected: mu=0, lambda=1, tortoise=1, hare=2",
+        "action": "navigate_warp_vector",
+        "arguments": {
+          "x": 1.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "state": {
+          "sector": "DUST_LANE",
+          "shields": 30,
+          "plasma": 100,
+          "hull": 100
+        },
+        "hash": "12b39809e6c529f8",
+        "repeats": 3
+      }
+    ]
+  },
+  {
+    "pilot": "System 2 (deliberative)",
+    "seed": 6,
+    "start": "DUST_LANE",
+    "outcome": "escaped",
+    "halt_reason": "mission completed",
+    "final_sector": "OPEN_SPACE",
+    "agent_steps": 10,
+    "actions": 2,
+    "tool_errors": 0,
+    "G0": 93.05,
+    "rewards": [
+      -1.0,
+      99.0
+    ],
+    "states": [
+      "DUST_LANE",
+      "CORRIDOR",
+      "OPEN_SPACE"
+    ],
+    "events": [
+      {
+        "step": 4,
+        "sector": "DUST_LANE",
+        "shields": 30,
+        "plan": "lookahead: Q(DIRECT)=82.57, Q(CORRIDOR)=92.18; override reflex DIRECT -> CORRIDOR",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": -0.85,
+            "y": 0.52,
+            "z": 0.05
+          }
+        },
+        "observation": "Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in CORRIDOR; plasma reserve 95%.",
+        "reward": -1.0,
+        "arrived": "CORRIDOR"
+      },
+      {
+        "step": 8,
+        "sector": "CORRIDOR",
+        "shields": 30,
+        "plan": "lookahead: Q(DIRECT)=98.58, Q(CORRIDOR)=98.77; override reflex DIRECT -> CORRIDOR",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": -0.85,
+            "y": 0.52,
+            "z": 0.05
+          }
+        },
+        "observation": "Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in OPEN_SPACE; plasma reserve 90%.",
+        "reward": 99.0,
+        "arrived": "OPEN_SPACE"
+      }
+    ],
+    "security_log": []
+  },
+  {
+    "pilot": "System 1 (reflex)",
+    "seed": 3,
+    "start": "CORE",
+    "outcome": "hull_breach",
+    "halt_reason": "hull breach",
+    "final_sector": "HULL_BREACH",
+    "agent_steps": 5,
+    "actions": 1,
+    "tool_errors": 0,
+    "G0": -101.0,
+    "rewards": [
+      -101.0
+    ],
+    "states": [
+      "CORE",
+      "HULL_BREACH"
+    ],
+    "events": [
+      {
+        "step": 4,
+        "sector": "CORE",
+        "shields": 30,
+        "plan": "reflex: shortest heading to open space",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "observation": "Observation: Warp jump along [1.00, 0.00, 0.00] (DIRECT heading) arrived in HULL_BREACH; plasma reserve 95%.",
+        "reward": -101.0,
+        "arrived": "HULL_BREACH"
+      }
+    ],
+    "security_log": []
+  },
+  {
+    "pilot": "System 2 (deliberative)",
+    "seed": 3,
+    "start": "CORE",
+    "outcome": "escaped",
+    "halt_reason": "mission completed",
+    "final_sector": "OPEN_SPACE",
+    "agent_steps": 10,
+    "actions": 2,
+    "tool_errors": 0,
+    "G0": 93.55,
+    "rewards": [
+      -0.5,
+      99.0
+    ],
+    "states": [
+      "CORE",
+      "CORE",
+      "OPEN_SPACE"
+    ],
+    "events": [
+      {
+        "step": 4,
+        "sector": "CORE",
+        "shields": 30,
+        "plan": "constraint: core radiation and shields 30% < 60%; raise shields before any burn",
+        "call": {
+          "tool": "adjust_plasma_shields",
+          "arguments": {
+            "intensity": 80
+          }
+        },
+        "observation": "Observation: Plasma shield harmonics adjusted to 80% capacity.",
+        "reward": -0.5,
+        "arrived": "CORE"
+      },
+      {
+        "step": 8,
+        "sector": "CORE",
+        "shields": 80,
+        "plan": "lookahead: Q(DIRECT)=93.19, Q(CORRIDOR)=91.27; approve reflex",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "observation": "Observation: Warp jump along [1.00, 0.00, 0.00] (DIRECT heading) arrived in OPEN_SPACE; plasma reserve 95%.",
+        "reward": 99.0,
+        "arrived": "OPEN_SPACE"
+      }
+    ],
+    "security_log": []
+  },
+  {
+    "pilot": "System 2 (stale map)",
+    "seed": 6,
+    "start": "DUST_LANE",
+    "outcome": "escaped",
+    "halt_reason": "mission completed",
+    "final_sector": "OPEN_SPACE",
+    "agent_steps": 14,
+    "actions": 3,
+    "tool_errors": 1,
+    "G0": 83.3975,
+    "rewards": [
+      -5.0,
+      -1.0,
+      99.0
+    ],
+    "states": [
+      "DUST_LANE",
+      "DUST_LANE",
+      "CORRIDOR",
+      "OPEN_SPACE"
+    ],
+    "events": [
+      {
+        "step": 4,
+        "sector": "DUST_LANE",
+        "shields": 30,
+        "plan": "lookahead: Q(DIRECT)=99.00, Q(CORRIDOR)=92.18; approve reflex",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "observation": "Tool Execution Error: ValueError: gravitational shear wall blocks the DIRECT heading from DUST_LANE; jump aborted",
+        "reward": -5.0,
+        "arrived": "DUST_LANE"
+      },
+      {
+        "step": 8,
+        "sector": "DUST_LANE",
+        "shields": 30,
+        "plan": "lookahead: Q(DIRECT)=99.00, Q(CORRIDOR)=92.18; skip DIRECT (already failed in this state); override reflex DIRECT -> CORRIDOR",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": -0.85,
+            "y": 0.52,
+            "z": 0.05
+          }
+        },
+        "observation": "Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in CORRIDOR; plasma reserve 95%.",
+        "reward": -1.0,
+        "arrived": "CORRIDOR"
+      },
+      {
+        "step": 12,
+        "sector": "CORRIDOR",
+        "shields": 30,
+        "plan": "lookahead: Q(DIRECT)=98.58, Q(CORRIDOR)=98.77; override reflex DIRECT -> CORRIDOR",
+        "call": {
+          "tool": "navigate_warp_vector",
+          "arguments": {
+            "x": -0.85,
+            "y": 0.52,
+            "z": 0.05
+          }
+        },
+        "observation": "Observation: Warp jump along [-0.85, 0.52, 0.05] (CORRIDOR heading) arrived in OPEN_SPACE; plasma reserve 90%.",
+        "reward": 99.0,
+        "arrived": "OPEN_SPACE"
+      }
+    ],
+    "security_log": []
+  }
+]

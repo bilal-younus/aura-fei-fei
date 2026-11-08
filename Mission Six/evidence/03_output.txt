@@ -1,0 +1,23 @@
+=== Part 3: Discounted return of the brief's trajectory ===
+tau = ['s0', 'a0', 10.0, 's1', 'a1', 0.0, 's2', 'a2', -5.0, 's3', 'a3', 20.0, 's4']
+G_0 = 10 + 0.95*0 + 0.95^2*(-5) + 0.95^3*20 = 22.635
+G_t = [22.635, 13.3, 14.0, 20.0]
+
+=== Part 3: Empirical P(s'|s,a) from 600 synthetic historical jumps ===
+     CORE | CORRIDOR | n= 68 | CORE=0.294, CORRIDOR=0.706
+     CORE | DIRECT   | n= 77 | CORE=0.506, OPEN_SPACE=0.494
+ CORRIDOR | CORRIDOR | n= 80 | CORRIDOR=0.037, OPEN_SPACE=0.963
+ CORRIDOR | DIRECT   | n= 73 | CORRIDOR=0.068, OPEN_SPACE=0.932
+DUST_LANE | CORRIDOR | n= 77 | CORRIDOR=0.896, DUST_LANE=0.104
+DUST_LANE | DIRECT   | n= 72 | DUST_LANE=1.000
+     LOBE | CORRIDOR | n= 74 | CORRIDOR=0.878, DUST_LANE=0.122
+     LOBE | DIRECT   | n= 79 | CORE=0.835, DUST_LANE=0.165
+Max |P_hat - P_true| = 0.035
+
+=== Part 3: Bellman value iteration on the estimated model (gamma = 0.95) ===
+     LOBE | V*=  92.07 | Q(DIRECT)=  87.37 | Q(CORRIDOR)=  92.07
+DUST_LANE | V*=  92.18 | Q(DIRECT)=  82.57 | Q(CORRIDOR)=  92.18
+     CORE | V*=  93.19 | Q(DIRECT)=  93.19 | Q(CORRIDOR)=  91.27
+ CORRIDOR | V*=  98.77 | Q(DIRECT)=  98.58 | Q(CORRIDOR)=  98.77
+Greedy policy: {'CORE': 'DIRECT', 'CORRIDOR': 'CORRIDOR', 'DUST_LANE': 'CORRIDOR', 'LOBE': 'CORRIDOR'}
+[PASS] MDP logger and evaluator verified.

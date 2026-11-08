@@ -1,0 +1,7 @@
+# The five scripts and tests use only the Python 3.11+ standard library (no agent framework).
+# matplotlib draws evidence/pilot_comparison.png; the rest rebuild the notebook and the PDF report.
+matplotlib>=3.8,<4
+reportlab>=4,<6
+nbformat>=5,<6
+nbclient>=0.10,<1
+ipykernel>=6,<8
